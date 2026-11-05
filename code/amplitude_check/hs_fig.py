@@ -4,7 +4,8 @@ from hs_mixed import run
 plt.rcParams.update({'font.size':10,'mathtext.fontset':'cm','font.family':'serif'})
 ab=np.array([0,0.05,0.1,0.2,0.3,0.4,0.5,0.6])
 fig,ax=plt.subplots(figsize=(5.6,3.9))
-ax.axhspan(1.6e-4,7e-4,color='C1',alpha=0.2,label=r'required ($\mathrm{Br}_{\tilde h\tilde h}=0.4$)')
+ax.axhspan(0.65e-4,2.8e-4,color='C1',alpha=0.35,label=r'required, $\mathrm{Br}_{\tilde h\tilde h}=1$')
+ax.axhspan(1.6e-4,7e-4,color='C1',alpha=0.15,label=r'required, $\mathrm{Br}_{\tilde h\tilde h}=0.4$')
 data={}
 for ms,X,st in ((2.0,0.865,'C0'),(3.0,1.298,'C3')):
     e=[abs(run(np.sqrt(0.5*(1-a**2)),a,+1,0.4,ms,X)) for a in ab]; data[ms]=e
